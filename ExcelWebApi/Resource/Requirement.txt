@@ -1,0 +1,43 @@
+Request: 
+ 
+{
+"ExcelFilePath": "C:\\Users\\BT2020\\Documents\\Visual Studio 2019\\Project\\Resource\\ExcelBook.xlsx",
+"ValidationPolicy": [
+	{
+		"type": "RequiredSheet",
+		"values": [
+			"Sheet1",
+			"Sheet2"
+		]
+	},
+	{
+		"type": "RequiredColumns",
+		"SheetName": "Sheet1",
+		"values": [
+			"Col1",
+			"Col2"
+		]
+	}
+]
+}
+ 
+
+Response:
+
+ 
+
+{
+
+    "status": "Failure",
+
+    "messages": [
+
+        "Sheet Sheet1 is required but not found.",
+
+        "Sheet Sheet2 is required but not found.",
+
+        "Col2 not found in the Sheet 1"
+
+    ]
+
+}
